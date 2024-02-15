@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/* Import Tailwind CSS components and utilities */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Import Google Fonts or other @import statements */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap");
+
+/* Other styles */
+* {
+  font-family:
+    "Quicksand",
+    "Garamond",
+    "Kaushan" sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: block;
+}
+button {
+  border: none;
+}
+
+.example::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar in WebKit-based browsers (Chrome, Safari) */
+}
+
+.example {
+  -ms-overflow-style: none; /* Hide the scrollbar for Internet Explorer, Edge */
+  scrollbar-width: none; /* Hide the scrollbar for Firefox */
+}
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 24px;
+  height: 24px;
+  -webkit-appearance: none;
+  /* @apply w-6 h-6 appearance-none pointer-events-auto; */
+}
+@layer components {
+  .icon__wrapper {
+    @apply border border-gray-400 rounded-full w-[50px] h-[50px] grid place-items-center text-[22px] hover:bg-warning hover:text-primary;
+  }
+  .feature_btn {
+    @apply bg-secondary text-white px-4 py-1 rounded-full hover:bg-warning;
+  }
+}
